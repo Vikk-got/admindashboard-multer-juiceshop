@@ -1,0 +1,54 @@
+.three-d-card{
+  position:relative;
+  border-radius:18px;
+  transform-style:preserve-3d;
+  perspective:1200px;
+  overflow:visible;
+  transition:transform .45s cubic-bezier(.175,.885,.32,1.275),box-shadow .45s;
+}
+
+.three-d-card .three-d-content{
+  position:relative;
+  z-index:4;
+}
+
+.three-d-card .depth-layer{
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  pointer-events:none;
+  transition:transform .45s,opacity .45s;
+}
+
+.depth-back{
+  background:linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.12));
+  transform:translateZ(-60px) scale(1.03);
+  z-index:1;
+  opacity:0.7;
+}
+
+.depth-middle{
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.05));
+  transform:translateZ(-30px) scale(1.02);
+  z-index:2;
+  opacity:0.9;
+}
+
+.depth-front{
+  background:linear-gradient(120deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  transform:translateZ(0px) scale(1);
+  z-index:3;
+  mix-blend-mode:overlay;
+}
+
+/* hover tilt */
+.three-d-card:hover{
+  transform:translateY(-10px) rotateX(6deg) rotateY(-6deg) scale(1.02);
+  box-shadow: -18px 18px 40px rgba(0,0,0,0.25);
+}
+
+/* small screens: reduce 3D */
+@media(max-width:768px){
+  .three-d-card{transform:none !important;perspective:800px}
+  .three-d-card:hover{transform:none}
+}

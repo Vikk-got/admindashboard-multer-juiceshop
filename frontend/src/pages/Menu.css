@@ -1,0 +1,154 @@
+/* Menu Section Styles */
+.menu-categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.menu-btn {
+    padding: 10px 25px;
+    border: 2px solid var(--color-primary);
+    background: transparent;
+    color: var(--color-text);
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+    font-family: var(--font-body);
+}
+
+.menu-btn.active,
+.menu-btn:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 40px;
+    perspective: 1200px;
+    /* Increased perspective for stronger 3D */
+}
+
+.menu-card {
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.6s ease;
+    display: flex;
+    flex-direction: column;
+    transform-style: preserve-3d;
+    background: var(--color-glass-bg);
+    border: 1px solid var(--color-glass-border);
+    backdrop-filter: blur(12px);
+    /* High-end glass effect */
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.menu-card:hover {
+    transform: translateY(-15px) rotateX(12deg) rotateY(-12deg);
+    box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.menu-img-wrap {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+    transform-style: preserve-3d;
+}
+
+.menu-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.menu-card:hover .menu-img-wrap img {
+    transform: scale(1.15) translateZ(30px);
+    /* Image pops out slightly */
+}
+
+.price {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--color-secondary);
+    color: var(--color-text);
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: translateZ(60px);
+    /* Price floats high */
+    z-index: 2;
+}
+
+.menu-info {
+    padding: 25px;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transform-style: preserve-3d;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), transparent);
+}
+
+.menu-info h3 {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    margin: 0;
+    transform: translateZ(40px);
+    /* Title pops out */
+}
+
+.menu-info p {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+    margin: 0;
+    flex-grow: 1;
+    transform: translateZ(20px);
+    line-height: 1.5;
+}
+
+.menu-rating {
+    color: #ffc107;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateZ(35px);
+    /* Stars pop out */
+    font-size: 1.1rem;
+}
+
+.menu-rating span {
+    color: var(--color-text-light);
+    font-size: 1rem;
+    margin-left: 8px;
+}
+
+@media (max-width: 768px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .menu-btn {
+        width: 100%;
+        padding: 12px 0;
+        font-size: 1rem;
+    }
+
+    .menu-card {
+        max-width: 100%;
+    }
+
+    .menu-img-wrap {
+        height: 150px;
+    }
+}

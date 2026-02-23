@@ -1,0 +1,109 @@
+/* About Section Styles */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-image {
+    position: relative;
+    border-radius: 20px;
+    padding: 20px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.owner-img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    aspect-ratio: 4/5;
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    background: var(--color-glass-bg);
+    transform-style: preserve-3d;
+    transform: translateZ(50px);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.experience-badge span {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+}
+
+.about-text h3 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    color: var(--color-text);
+}
+
+.about-text .role {
+    color: var(--color-accent);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: var(--color-text-light);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.stat-item {
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    transform-style: preserve-3d;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+}
+
+.stat-item i {
+    font-size: 2rem;
+    color: var(--color-secondary);
+    margin-bottom: 10px;
+}
+
+.stat-item h4 {
+    font-size: 1.8rem;
+    color: var(--color-text);
+    margin-bottom: 5px;
+}
+
+.stat-item p {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-badge {
+        right: 10px;
+        bottom: 10px;
+    }
+}

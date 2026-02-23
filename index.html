@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Krishna Juice Shop located at Jagatpura Fatak, Jaipur. Serving the Best Shakes & Juices.">
+    <title>Krishna Juice Shop | Freshness in Every Sip</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader-content">
+            <i class="fa-solid fa-martini-glass-citrus fa-spin"></i>
+            <h2>Mixing Freshness...</h2>
+        </div>
+    </div>
+
+    <!-- Animated Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Theme Toggle & Back to Top -->
+    <button id="theme-toggle" aria-label="Toggle Dark Mode">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+    <button id="back-to-top" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <a href="https://wa.me/919939429446" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-lemon"></i> Krishna Juice
+            </a>
+            <div class="menu-icon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <!-- Background Images handled in CSS or JS Parallax -->
+            <div class="hero-content">
+                <h1 class="hero-title">Freshness in Every Sip 🍹</h1>
+                <p class="hero-tagline">Serving the Best Shakes & Juices in Jagatpura</p>
+                <div class="hero-ctas">
+                    <a href="#menu" class="btn btn-primary">View Menu</a>
+                    <a href="#contact" class="btn btn-secondary">Order Now</a>
+                </div>
+            </div>
+            <div class="floating-fruits">
+                <!-- GSAP target elements -->
+                <img src="https://images.unsplash.com/photo-1582281269781-a6cc72ca3548?w=800&auto=format&fit=crop&q=60"
+                    alt="Orange" class="fruit orange-img" crossorigin="anonymous">
+                <img src="https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?w=800&auto=format&fit=crop&q=60"
+                    alt="Mango" class="fruit mango-img" crossorigin="anonymous">
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Our Story</h2>
+                    <p class="section-subtitle">Serving freshness with love and hygiene since Day 1.</p>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=800&auto=format&fit=crop&q=60"
+                            alt="Mr. Krishna - Owner" class="owner-img" crossorigin="anonymous">
+                        <div class="experience-badge glass">
+                            <span class="counter" data-target="10">0</span>+
+                            <p>Years of Experience</p>
+                        </div>
+                    </div>
+
+                    <div class="about-text">
+                        <h3>Meet Mr. Krishna</h3>
+                        <p class="role">Founder & Owner</p>
+                        <p>Welcome to Krishna Juice Shop! We started our journey with a simple mission: to provide the
+                            most hygienic, fresh, and delicious juices and shakes to the Jagatpura community at
+                            affordable prices.</p>
+                        <p>Every sip you take is crafted with the freshest fruits, premium ingredients, and a touch of
+                            our secret recipe that has been loved by thousands over the past decade.</p>
+
+                        <div class="stats-grid">
+                            <div class="stat-item glass">
+                                <i class="fa-solid fa-users"></i>
+                                <h4><span class="counter" data-target="5000">0</span>+</h4>
+                                <p>Happy Customers</p>
+                            </div>
+                            <div class="stat-item glass">
+                                <i class="fa-solid fa-glass-water"></i>
+                                <h4><span class="counter" data-target="50">0</span>+</h4>
+                                <p>Shake Varieties</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="menu section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Our Menu</h2>
+                    <p class="section-subtitle">Discover our refreshing range of drinks made with love.</p>
+                </div>
+
+                <div class="menu-categories">
+                    <button class="menu-btn active" data-filter="all">All</button>
+                    <button class="menu-btn" data-filter="shakes">🥭 Shakes</button>
+                    <button class="menu-btn" data-filter="juices">🍊 Fresh Juices</button>
+                    <button class="menu-btn" data-filter="special">🥤 Special Items</button>
+                </div>
+
+                <div class="menu-grid">
+                    <!-- Shake Items -->
+                    <div class="menu-card glass" data-category="shakes">
+                        <div class="menu-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1626305986873-19ebbb458d92?w=500&auto=format&fit=crop&q=60"
+                                alt="Mango Shake" crossorigin="anonymous">
+                            <span class="price">₹80</span>
+                        </div>
+                        <div class="menu-info">
+                            <h3>Mango Shake</h3>
+                            <p>Rich and creamy summer delight.</p>
+                            <div class="menu-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <span>(4.8)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-card glass" data-category="shakes">
+                        <div class="menu-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=500&auto=format&fit=crop&q=60"
+                                alt="Chocolate Shake" crossorigin="anonymous">
+                            <span class="price">₹90</span>
+                        </div>
+                        <div class="menu-info">
+                            <h3>Chocolate Shake</h3>
+                            <p>Perfect blend of cocoa and milk.</p>
+                            <div class="menu-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(5.0)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Juice Items -->
+                    <div class="menu-card glass" data-category="juices">
+                        <div class="menu-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=500&auto=format&fit=crop&q=60"
+                                alt="Orange Juice" crossorigin="anonymous">
+                            <span class="price">₹60</span>
+                        </div>
+                        <div class="menu-info">
+                            <h3>Orange Juice</h3>
+                            <p>Freshly squeezed Vitamin C.</p>
+                            <div class="menu-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <span>(4.2)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-card glass" data-category="juices">
+                        <div class="menu-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1546173159-315724a31696?w=500&auto=format&fit=crop&q=60"
+                                alt="Pomegranate Juice" crossorigin="anonymous">
+                            <span class="price">₹80</span>
+                        </div>
+                        <div class="menu-info">
+                            <h3>Pomegranate Juice</h3>
+                            <p>Healthy and refreshing mocktail.</p>
+                            <div class="menu-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <span>(4.7)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Special Items -->
+                    <div class="menu-card glass" data-category="special">
+                        <div class="menu-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1556881286-fc6915169721?w=500&auto=format&fit=crop&q=60"
+                                alt="Dry Fruit Shake" crossorigin="anonymous">
+                            <span class="price">₹120</span>
+                        </div>
+                        <div class="menu-info">
+                            <h3>Dry Fruit Shake</h3>
+                            <p>Power packed with premium dry fruits.</p>
+                            <div class="menu-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(4.9)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews" class="reviews section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Happy Sippers</h2>
+                    <p class="section-subtitle">See what our community has to say about us.</p>
+                </div>
+
+                <div class="overall-rating text-center mb-4" style="margin-bottom: 40px;">
+                    <h3>Overall Rating: <span>4.8/5</span></h3>
+                    <div class="menu-rating" style="justify-content: center; display: flex; font-size: 1.5rem;">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                </div>
+
+                <div class="reviews-grid">
+                    <!-- Review Card 1 -->
+                    <div class="review-card glass">
+                        <div class="review-header">
+                            <i class="fa-solid fa-user-circle user-icon"></i>
+                            <div class="user-info">
+                                <h4>Rahul Verma</h4>
+                                <span class="date">Feb 15, 2026</span>
+                            </div>
+                        </div>
+                        <div class="menu-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">"Best Mango Shake in Jagatpura! The thickness and taste are just perfect.
+                            Always hygienic and fresh."</p>
+                    </div>
+
+                    <!-- Review Card 2 -->
+                    <div class="review-card glass">
+                        <div class="review-header">
+                            <i class="fa-solid fa-user-circle user-icon"></i>
+                            <div class="user-info">
+                                <h4>Priya Sharma</h4>
+                                <span class="date">Feb 10, 2026</span>
+                            </div>
+                        </div>
+                        <div class="menu-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <p class="review-text">"I love their mix fruit juice. Very refreshing after a long day at
+                            college. Highly recommend!"</p>
+                    </div>
+
+                    <!-- Review Card 3 -->
+                    <div class="review-card glass">
+                        <div class="review-header">
+                            <i class="fa-solid fa-user-circle user-icon"></i>
+                            <div class="user-info">
+                                <h4>Amit Singh</h4>
+                                <span class="date">Jan 28, 2026</span>
+                            </div>
+                        </div>
+                        <div class="menu-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">"Great place to hang out. The dry fruit shake is a must-try. Value for
+                            money!"</p>
+                    </div>
+                </div>
+
+                <!-- Review Form -->
+                <div class="review-form-wrap glass">
+                    <h3 class="text-center" style="margin-bottom: 20px;">Leave a Review</h3>
+                    <form id="review-form">
+                        <div class="rating-select">
+                            <span>Your Rating: </span>
+                            <div class="stars">
+                                <i class="fa-regular fa-star" data-val="1"></i>
+                                <i class="fa-regular fa-star" data-val="2"></i>
+                                <i class="fa-regular fa-star" data-val="3"></i>
+                                <i class="fa-regular fa-star" data-val="4"></i>
+                                <i class="fa-regular fa-star" data-val="5"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Comment" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Review</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Visit Us</h2>
+                    <p class="section-subtitle">We'd love to serve you! Get in touch or drop by.</p>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-info glass">
+                        <div class="info-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Jagatpura Fatak, Jaipur, Rajasthan</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+91 99394 29446</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>rkt2classes@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="contact-map glass">
+                        <!-- Embedded Google Map -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14238.647568582845!2d75.82035985!3d26.8247078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396dc9a2e8c20847%3A0x9db2da0c78a9c3!2sJagatpura%2C%20Jaipur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                            width="100%" height="100%" style="border:0; border-radius: 15px;" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- GSAP & Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>

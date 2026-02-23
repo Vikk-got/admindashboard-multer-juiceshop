@@ -1,0 +1,42 @@
+[
+  {
+    "_id": "1771852519417-pby7bl",
+    "name": "Vatsal ",
+    "rating": 3,
+    "comment": "nice",
+    "createdAt": "2026-02-23T13:15:19.417Z",
+    "updatedAt": "2026-02-23T13:15:19.417Z"
+  },
+  {
+    "_id": "1771847535157-3hc3iz",
+    "name": "fds",
+    "rating": 2,
+    "comment": "sd",
+    "createdAt": "2026-02-23T11:52:15.157Z",
+    "updatedAt": "2026-02-23T11:52:15.157Z"
+  },
+  {
+    "_id": "1771846558596-z6kui2",
+    "name": "abhishek ",
+    "rating": 4,
+    "comment": "nice taste",
+    "createdAt": "2026-02-23T11:35:58.596Z",
+    "updatedAt": "2026-02-23T11:35:58.596Z"
+  },
+  {
+    "_id": "1771846540707-hdx84j",
+    "name": "neeraj ",
+    "rating": 3,
+    "comment": "smokky\n",
+    "createdAt": "2026-02-23T11:35:40.707Z",
+    "updatedAt": "2026-02-23T11:35:40.707Z"
+  },
+  {
+    "_id": "1771846526743-15wqz2",
+    "name": "Raju ",
+    "rating": 4,
+    "comment": "fresh",
+    "createdAt": "2026-02-23T11:35:26.743Z",
+    "updatedAt": "2026-02-23T11:35:26.743Z"
+  }
+]

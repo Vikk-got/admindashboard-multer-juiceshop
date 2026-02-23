@@ -1,0 +1,112 @@
+/* Booking Section Styles */
+.booking {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.booking-form-wrap {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.booking-form .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+    /* Overriding global form-group if it had margin */
+}
+
+.booking-form label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--color-text);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.booking-form input,
+.booking-form select {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid var(--color-glass-border);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #1a1a1a;
+    /* Force dark text for visibility in light mode */
+    font-family: var(--font-body);
+    font-size: 1rem;
+    outline: none;
+    transition: var(--transition);
+}
+
+[data-theme="dark"] .booking-form input,
+[data-theme="dark"] .booking-form select {
+    background: rgba(0, 0, 0, 0.4);
+    color: var(--color-white);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.booking-form input::placeholder {
+    color: #666;
+}
+
+[data-theme="dark"] .booking-form input::placeholder {
+    color: #aaa;
+}
+
+[data-theme="dark"] .booking-form select option {
+    background: var(--color-bg);
+    color: var(--color-text);
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+    border-color: var(--color-primary);
+    background: var(--color-white);
+    box-shadow: 0 0 15px rgba(255, 123, 0, 0.15);
+}
+
+[data-theme="dark"] .booking-form input:focus,
+[data-theme="dark"] .booking-form select:focus {
+    background: #000;
+}
+
+.submit-btn {
+    margin-top: 25px;
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 18px 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: linear-gradient(45deg, #e65100, #ff7b00);
+    /* Slightly darker orange for better contrast with white text */
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .booking-form-wrap {
+        padding: 30px 20px;
+    }
+}

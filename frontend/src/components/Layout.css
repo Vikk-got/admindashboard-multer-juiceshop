@@ -1,0 +1,188 @@
+/* Layout and Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--nav-height);
+    z-index: 1000;
+    transition: var(--transition);
+    background: var(--color-glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-map-link {
+    font-size: 1.3rem;
+    color: var(--color-primary);
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.nav-map-link:hover {
+    color: var(--color-secondary);
+    transform: scale(1.1);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-primary);
+    transition: width var(--transition);
+}
+
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    color: var(--color-primary);
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.btn-nav {
+    background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+    color: white !important;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(255, 123, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-nav::after {
+    display: none;
+    /* Hide the underline effect for the button */
+}
+
+.btn-nav:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 123, 0, 0.4);
+}
+
+/* Floating Elements */
+#theme-toggle,
+#back-to-top,
+.whatsapp-float {
+    position: fixed;
+    z-index: 999;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+    border: none;
+}
+
+#theme-toggle {
+    bottom: 20px;
+    left: 20px;
+    background: var(--color-text);
+    color: var(--color-bg);
+}
+
+.whatsapp-float {
+    bottom: 80px;
+    right: 20px;
+    background: #25d366;
+    color: white;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: var(--nav-height);
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - var(--nav-height));
+        background: var(--color-glass-bg);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        transition: right var(--transition);
+        border-top: 1px solid var(--color-glass-border);
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        font-size: 1.5rem;
+    }
+
+    .footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links ul {
+        align-items: center;
+    }
+}
+
+/* Base 3D View */
+.glass {
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.5s;
+    transform-style: preserve-3d;
+}
+
+/* When not inside the menu grid that already has extreme 3D, apply subtle floating 3D */
+section:not(.menu) .glass:hover {
+    transform: translateY(-8px) rotateX(2deg) rotateY(2deg) scale(1.02);
+    box-shadow: -10px 10px 25px rgba(0, 0, 0, 0.15);
+}
