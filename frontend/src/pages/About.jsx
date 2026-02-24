@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SEO from '../components/SEO';
 import ThreeDCard from '../components/ThreeDCard';
+import img1 from "../assets/c486167e-2a55-4016-aa1e-b7c660d7d8c5.jpg"
 import './About.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -100,7 +101,7 @@ function About() {
                     <div className="about-content">
                         <div className="about-image">
                             <img
-                                src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=800&auto=format&fit=crop&q=60"
+                                src={img1}
                                 alt="Mr. Krishna - Owner"
                                 className="owner-img"
                                 crossOrigin="anonymous"

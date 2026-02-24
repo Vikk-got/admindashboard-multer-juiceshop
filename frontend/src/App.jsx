@@ -6,6 +6,8 @@ import Menu from './pages/Menu';
 import Reviews from './pages/Reviews';
 import Contact from './pages/Contact';
 import Booking from './pages/Booking';
+import Gallery from './pages/Gallery';
+import Dashboard from './pages/Dashboard';
 
 function App() {
   return (
@@ -16,7 +18,9 @@ function App() {
         <Route path="menu" element={<Menu />} />
         <Route path="reviews" element={<Reviews />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="gallery" element={<Gallery />} />
         <Route path="booking" element={<Booking />} />
+        <Route path="dashboard" element={<Dashboard />} />
       </Route>
     </Routes>
   );

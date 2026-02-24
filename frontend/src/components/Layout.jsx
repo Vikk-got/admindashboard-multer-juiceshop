@@ -57,6 +57,8 @@ function Layout() {
                         <li><NavLink to="/menu">Menu</NavLink></li>
                         <li><NavLink to="/reviews">Reviews</NavLink></li>
                         <li><NavLink to="/contact">Contact</NavLink></li>
+                        <li><NavLink to="/gallery">Gallery</NavLink></li>
+                        <li><NavLink to="/dashboard">Admin</NavLink></li>
                         <li><NavLink to="/booking" className="btn btn-nav">Book Now</NavLink></li>
                     </ul>
                 </div>
@@ -79,6 +81,8 @@ function Layout() {
                         <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
                             <li><Link to="/about" style={{ color: 'var(--color-text-light)' }}>About Us</Link></li>
                             <li><Link to="/menu" style={{ color: 'var(--color-text-light)' }}>Our Menu</Link></li>
+                            <li><Link to="/gallery" style={{ color: 'var(--color-text-light)' }}>Gallery</Link></li>
+                            <li><Link to="/dashboard" style={{ color: 'var(--color-text-light)' }}>Admin Dashboard</Link></li>
                             <li><Link to="/booking" style={{ color: 'var(--color-text-light)' }}>Book an Event</Link></li>
                             <li><Link to="/contact" style={{ color: 'var(--color-text-light)' }}>Contact</Link></li>
                         </ul>
